@@ -14,7 +14,7 @@ int count_letters(char *s)
 
 int another_test(char *s)
 {
-    if (s == 32)
+    if (*s == 32)
     {
         return 0;
     }
