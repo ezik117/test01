@@ -11,3 +11,18 @@ int count_letters(char *s)
     
     return len;
 }
+
+int another_test(char *s)
+{
+    if (s == 32)
+    {
+        return 0;
+    }
+
+    return 1;
+}
+
+int do_not_called(char *s)
+{
+    return 0;    
+}

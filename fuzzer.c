@@ -11,8 +11,10 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
   memcpy(buf, data, size);
     
   count_letters(buf);
+  another_test(buf);
   
   free(buf);
   
   return 0;
 }
+
