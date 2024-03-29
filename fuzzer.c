@@ -25,6 +25,8 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
   ns[size] = '\0';
   
   count_lowercase_letters(ns);
+
+  myfunc(ns);
   
   free(ns);
   return 0;

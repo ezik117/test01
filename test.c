@@ -62,6 +62,11 @@ int get_the_right_character(char *input, int idx) {
     return -1;
 }
 
+int myfunc(char *s)
+{
+    return 40;
+}
+
 int read_key_figures(char *input, size_t half_length) {
     if (half_length < 10) {
         return -1;
