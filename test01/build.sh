@@ -16,12 +16,12 @@
 ################################################################################
 
 # Build project using the OSS-Fuzz enviroonment flags.
-$CC $CFLAGS -c char_lib.c -o char_lib.o
+$CC $CFLAGS -c test.c -o test.o
 
 # Build the fuzzers. We must ensure we link with $CXX to support Centipede.
 # Fuzzers must be placed in $OUT/
 #$CC $CFLAGS -c fuzz_char_lib.c -o fuzz_char_lib.o
 #$CXX $CXXFLAGS $LIB_FUZZING_ENGINE fuzz_char_lib.o char_lib.o -o $OUT/fuzz_char_lib
 
-$CC $CFLAGS -c fuzz_complex_parser.c -o fuzz_complex_parser.o
-$CXX $CXXFLAGS $LIB_FUZZING_ENGINE fuzz_complex_parser.o char_lib.o -o $OUT/test01
+$CC $CFLAGS -c fuzzer.c -o fuzzer.o
+$CXX $CXXFLAGS $LIB_FUZZING_ENGINE fuzzer.o test.o -o $OUT/test01
