@@ -16,3 +16,5 @@ int count_lowercase_letters(char *input);
 int parse_complex_format(char *input);
 int parse_complex_format_second(char *input);
 int myfunc(char *s);
+int get_the_right_character(char *input, int idx);
+int read_key_figures(char *input, size_t half_length);
